@@ -15,10 +15,20 @@ This project was built while following a tutorial by Josh Tried Coding and then 
 - cookie-based room access validation
 - a lightweight, terminal-inspired UI
 
-<p align="center">
-  <img src="public/Screenshot_2026-04-26_191608.png.png" width="45%" />
-  <img src="public/Screenshot_2026-04-26_191608.png" width="45%" />
-</p>
+<table align="center">
+  <tr>
+    <td align="center">
+      <kbd><img src="public/Screenshot_2026-04-26_191634.png" width="100%" /></kbd>
+      <br />
+      <b>Lobby</b>
+    </td>
+    <td align="center">
+      <kbd><img src="public/Screenshot_2026-04-26_191608.png" width="100%" /></kbd>
+      <br />
+      <b>Chat Room</b>
+    </td>
+  </tr>
+</table>
 
 ## Table of Contents
 

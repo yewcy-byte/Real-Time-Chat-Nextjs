@@ -18,7 +18,7 @@ This project was built while following a tutorial by Josh Tried Coding and then 
 <table align="center">
   <tr>
     <td align="center">
-      <kbd><img src="public/Screenshot_2026-04-26_191634.png" width="100%" /></kbd>
+      <kbd><img src="public/Screenshot_2026-04-26_191608.png.png" width="100%" /></kbd>
       <br />
       <b>Lobby</b>
     </td>

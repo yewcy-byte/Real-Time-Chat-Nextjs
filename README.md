@@ -51,4 +51,12 @@ space-y-4 make it have 4 pixles gap for all child elements
 
 autoFocus can be add to the input field html tag to auto focus
 
+<details>
+  <summary>🚀 Click to see technical setup</summary>
 
+  ### Any Markdown here
+  - Step 1
+  - Step 2
+
+  ```javascript
+  console.log("This code is hidden until clicked!");

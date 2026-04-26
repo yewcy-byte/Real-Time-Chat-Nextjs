@@ -19,6 +19,25 @@ essential way to run function one time when the page loads, because it will whec
 
     const [queryClient] = useState(() => new QueryClient())
 
+
+created unique cookie generation with nanoid and validate cookie id with middleware
+
+used zod package to prevent abuse message limit and DDOS
+
+# TanStack Query (enhanced react hooks)
+
+
+useMutation (enhanced useState so that no need set loading states manually)
+
+mutationFn + onError
+isPending
+isError
+
+onSuccess + queryClient.invalidateQueries
+
+
+
+
 # Tailwind notes
 flex-1 fills the whole space either vertiaclly or hoizontally based on the flex-col or default flex
 
@@ -31,3 +50,5 @@ absolute make the object not affected by other components in the same div and ma
 space-y-4 make it have 4 pixles gap for all child elements
 
 autoFocus can be add to the input field html tag to auto focus
+
+

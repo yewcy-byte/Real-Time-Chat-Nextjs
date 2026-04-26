@@ -2,6 +2,8 @@
 
 import {useParams} from "next/navigation"
 import { useState, useRef } from "react";
+import { useMutation } from "@tanstack/react-query";
+import { client } from "@/lib/client";
 
 
 function formatTimeRemaining(seconds: number){
@@ -21,6 +23,13 @@ export default function RoomPage() {
     const inputRef = useRef<HTMLInputElement>(null)
 
     const [timeRemaining, setTimeRemaining] = useState<number | null>(121)
+
+    const {mutate: sendMessage} = useMutation({
+        mutationFn: async ({text}: {text:string}) => {
+            // send message to backend
+            await client.message.post({sender: username, text}, {query:{roomId}})
+        }
+    })
 
     const copyLink = () => {
         const url = window.location.href;

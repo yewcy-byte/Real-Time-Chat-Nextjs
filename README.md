@@ -15,6 +15,19 @@ This project was built while following a tutorial by Josh Tried Coding and then 
 - cookie-based room access validation
 - a lightweight, terminal-inspired UI
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [How It Works](#how-it-works)
+- [Project Notes](#project-notes)
+- [Folder Structure](#folder-structure)
+- [Tutorial Credit](#tutorial-credit)
+- [My Personal Notes](#my-personal-notes)
+- [License](#license)
+
 ## Features
 
 - Create a unique chat room in one click.
@@ -151,6 +164,34 @@ Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy.
   ```
 </details>
 
-## License
+## My Personal Notes
 
-MIT
+<details>
+  <summary>My Personal Notes</summary>
+
+  - Installed Elysia for routing and server handling.
+  - Installed TanStack Query for enhanced React data hooks.
+  - Installed nanoid for easy unique ID generation.
+  - Installed Upstash Redis for cloud-hosted chat data.
+  - Stored usernames in browser localStorage using `localStorage.setItem(STORAGE_KEY, generated)`.
+  - Used `useState(() => ...)` for one-time client-side initialization.
+  - Created unique cookie generation with nanoid and validated it with middleware.
+  - Used Zod to prevent abuse with message length validation and request checks.
+  - Used date-fns for formatting time into readable strings.
+  - Used `await Promise.all([...])` when multiple async operations can run in parallel.
+  - `useMutation` helps handle loading and submit flows without manual loading state.
+  - `queryClient.invalidateQueries` is useful after successful mutations.
+  - `flex-1` fills available space in a flex layout.
+  - `transition-all` keeps UI animations smooth.
+  - `animate-pulse` creates a pulsing visual effect.
+  - `absolute` removes an element from normal layout flow.
+  - `space-y-4` adds spacing between children.
+  - `autoFocus` can be used on inputs to focus them automatically.
+  - `leading-relaxed` controls line spacing.
+  - `break-all` forces long text to wrap when needed.
+
+  ```javascript
+  console.log("This code is hidden until clicked!");
+  ```
+</details>
+

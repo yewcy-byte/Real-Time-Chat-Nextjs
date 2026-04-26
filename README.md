@@ -10,10 +10,15 @@ A private, self-destructing real-time chat app built with Next.js, Elysia, Upsta
 This project was built while following a tutorial by Josh Tried Coding and then adapted into a room-based chat app with:
 
 - room creation and sharing
-- ephemeral message storage
+- Redis message storage
 - real-time messaging
 - cookie-based room access validation
 - a lightweight, terminal-inspired UI
+
+<p align="center">
+  <img src="public/Screenshot_2026-04-26_191608.png.png" width="45%" />
+  <img src="public/Screenshot_2026-04-26_191608.png" width="45%" />
+</p>
 
 ## Table of Contents
 

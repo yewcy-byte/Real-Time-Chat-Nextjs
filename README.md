@@ -1,12 +1,123 @@
-<p align="center">
-  <img src="your-logo-url.png" width="200" />
-  <h2 align="center">Real-Time-Chat-Nextjs</h2>
-  <p align="center">Following a Youtube Tutorial by Josh Tried Coding</p>
-</p>
+# Real-Time-Chat-Nextjs
+
+A private, self-destructing real-time chat app built with Next.js, Elysia, Upstash Redis, and TanStack Query.
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Build](https://img.shields.io/badge/build-passing-brightgreen)
+
+
+## Overview
+
+This project was built while following a tutorial by Josh Tried Coding and then adapted into a room-based chat app with:
+
+- room creation and sharing
+- ephemeral message storage
+- real-time messaging
+- cookie-based room access validation
+- a lightweight, terminal-inspired UI
+
+## Features
+
+- Create a unique chat room in one click.
+- Share the room URL with other users.
+- Keep message history in Redis with room TTL cleanup.
+- Validate room access with middleware and cookies.
+- Send and fetch messages using TanStack Query.
+- Generate simple, readable anonymous usernames in the browser.
+
+## Tech Stack
+
+- Next.js 16
+- React
+- TypeScript
+- Elysia
+- Upstash Redis
+- Upstash Realtime
+- TanStack Query
+- Zod
+- nanoid
+- Tailwind CSS
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js installed
+- Redis and Realtime environment variables configured for Upstash
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+Then open:
+
+```bash
+http://localhost:3000
+```
+
+## How It Works
+
+1. A user opens the home page and receives a locally stored anonymous username.
+2. Clicking **Create Secure Room** creates a new room id on the server.
+3. The app redirects to `/room/[roomId]`.
+4. Middleware validates access and attaches a room token cookie.
+5. Messages are stored in Redis and broadcast through Realtime.
+6. Room metadata expires automatically after the configured TTL.
+
+## Project Notes
+
+- `useState(() => ...)` is used for one-time client-only initialization.
+- `useMutation` handles sending messages without manual loading state management.
+- `useQuery` keeps the message list synced with the server.
+- Zod is used to validate room and message payloads.
+- Redis TTL is used to keep rooms temporary and self-destructing.
+
+## Folder Structure
+
+```text
+src/
+  app/
+    api/
+      [[...slugs]]/
+        route.ts
+    components/
+      providers.tsx
+    room/
+      [roomId]/
+        page.tsx
+    globals.css
+    layout.tsx
+    page.tsx
+  hooks/
+    use-username.ts
+  lib/
+    client.ts
+    realtime.ts
+    realtime-client.ts
+    redis.ts
+  proxy.ts
+```
+
+## Tutorial Credit
+
+This project was inspired by the following tutorial:
+
+<p align="center">
+  <a href="https://youtu.be/D8CLV-MRH0k">
+    <img src="https://img.youtube.com/vi/D8CLV-MRH0k/0.jpg" alt="Josh Tried Coding tutorial" width="600" />
+  </a>
+</p>
+
+## Optional Markdown Examples
+
+These are kept here as examples of formatting you can reuse later if you want a more visual README.
 
 > [!NOTE]
 > Useful information that users should know.
@@ -22,85 +133,24 @@
 
 Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy.
 
-<span style="color:red">**CRITICAL:**</span> Connection lost to Redis.
-<span style="color:green">**SUCCESS:**</span> Message pushed to channel.
+<span style="color:red"><strong>CRITICAL:</strong></span> Connection lost to Redis.
+<span style="color:green"><strong>SUCCESS:</strong></span> Message pushed to channel.
 
 | Mobile View | Desktop View |
 | :---: | :---: |
-| <img src="link1.png" width="200" /> | <img src="link2.png" width="400" /> |
-
-## Table of Contents
-* [Installation](#installation)
-* [Usage](#usage)
-* [Contact](#contact)
-
-...
-
-## Installation <a name="installation"></a>
-
-# Notes to be elaborated (What I learnt)
-
-installed elysia 
-
-installed tanstack which is enhanced react hooks
-
-installed nanoid for easy unique id generation
-
-installed redis hosted in upstash so that it provides cloud hosting for realtime data for chat
-
-stored items in localStorage of browser using
-  localStorage.setItem(STORAGE_KEY, generated);
-
-essential way to run function one time when the page loads, because it will wheck whether the const have value already or not
-
-    const [queryClient] = useState(() => new QueryClient())
-
-
-created unique cookie generation with nanoid and validate cookie id with middleware
-
-used zod package to prevent abuse message limit and DDOS
-
-used date-fns package to convert unique time ids to readible format
-
-    await Promise.all([all functions that needs await but dont have other components depend on them seperate with comma,])
-
-# TanStack Query (enhanced react hooks)
-
-
-useMutation (enhanced useState so that no need set loading states manually)
-
-mutationFn + onError
-isPending
-isError
-
-onSuccess + queryClient.invalidateQueries
-
-
-
-
-# Tailwind notes
-flex-1 fills the whole space either vertiaclly or hoizontally based on the flex-col or default flex
-
-transition-all make sure animation smooth
-
-animation-pulse make pulsation color
-
-absolute make the object not affected by other components in the same div and make it float on top of all components
-
-space-y-4 make it have 4 pixles gap for all child elements
-
-autoFocus can be add to the input field html tag to auto focus
-
-leading-relaxed controls the hieght spacing of lines of text
-
-break-all break the text no matter what if it exceed the corner of the ui
+| <img src="link1.png" width="200" alt="Mobile view" /> | <img src="link2.png" width="400" alt="Desktop view" /> |
 
 <details>
-  <summary>🚀 Click to see technical setup</summary>
+  <summary>Technical Setup</summary>
 
-  ### Any Markdown here
   - Step 1
   - Step 2
 
   ```javascript
   console.log("This code is hidden until clicked!");
+  ```
+</details>
+
+## License
+
+MIT

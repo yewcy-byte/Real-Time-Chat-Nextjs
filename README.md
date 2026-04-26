@@ -29,6 +29,15 @@ Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy.
 | :---: | :---: |
 | <img src="link1.png" width="200" /> | <img src="link2.png" width="400" /> |
 
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contact](#contact)
+
+...
+
+## Installation <a name="installation"></a>
+
 # Notes to be elaborated (What I learnt)
 
 installed elysia 
@@ -50,6 +59,10 @@ essential way to run function one time when the page loads, because it will whec
 created unique cookie generation with nanoid and validate cookie id with middleware
 
 used zod package to prevent abuse message limit and DDOS
+
+used date-fns package to convert unique time ids to readible format
+
+    await Promise.all([all functions that needs await but dont have other components depend on them seperate with comma,])
 
 # TanStack Query (enhanced react hooks)
 
@@ -77,6 +90,10 @@ absolute make the object not affected by other components in the same div and ma
 space-y-4 make it have 4 pixles gap for all child elements
 
 autoFocus can be add to the input field html tag to auto focus
+
+leading-relaxed controls the hieght spacing of lines of text
+
+break-all break the text no matter what if it exceed the corner of the ui
 
 <details>
   <summary>🚀 Click to see technical setup</summary>

@@ -1,6 +1,33 @@
-# Real-Time-Chat-Nextjs
-Following a Youtube Tutorial by Josh Tried Coding
+<p align="center">
+  <img src="your-logo-url.png" width="200" />
+  <h2 align="center">Real-Time-Chat-Nextjs</h2>
+  <p align="center">Following a Youtube Tutorial by Josh Tried Coding</p>
+</p>
 
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Build](https://img.shields.io/badge/build-passing-brightgreen)
+
+> [!NOTE]
+> Useful information that users should know.
+
+> [!TIP]
+> Helpful advice for doing things more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy.
+
+<span style="color:red">**CRITICAL:**</span> Connection lost to Redis.
+<span style="color:green">**SUCCESS:**</span> Message pushed to channel.
+
+| Mobile View | Desktop View |
+| :---: | :---: |
+| <img src="link1.png" width="200" /> | <img src="link2.png" width="400" /> |
 
 # Notes to be elaborated (What I learnt)
 
